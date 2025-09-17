@@ -1,0 +1,16 @@
+[
+  {
+    "id": "a1",
+    "patientId": "p1",
+    "provider": "Dr. Smith",
+    "date": "2025-09-17T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "a2",
+    "patientId": "p2",
+    "provider": "Dr. Mehta",
+    "date": "2025-09-18T14:30:00",
+    "status": "pending"
+  }
+]

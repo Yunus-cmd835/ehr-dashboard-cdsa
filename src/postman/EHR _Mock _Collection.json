@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "4d215431-ac8b-4069-a4c0-c0417b044904",
+		"name": "EHR Mock API Collection",
+		"description": "Simulated endpoints for EHR dashboard assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45285346",
+		"_collection_link": "https://www.postman.com/yunus-evangeline/mock-api/collection/kewtu1u/ehr-mock-api?action=share&source=collection_link&creator=45285346"
+	},
+	"item": [
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Get All Patients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ehr.mock.local/api/patients",
+							"protocol": "https",
+							"host": [
+								"ehr",
+								"mock",
+								"local"
+							],
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://ehr.mock.local/api/patients",
+									"protocol": "https",
+									"host": [
+										"ehr",
+										"mock",
+										"local"
+									],
+									"path": [
+										"api",
+										"patients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"status\": \"success\",\n  \"data\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Benny\",\n      \"dob\": \"1995-09-17\",\n      \"gender\": \"male\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Benny\",\n  \"dob\": \"1995-09-17\",\n  \"gender\": \"male\",\n  \"contact\": \"9876543210\"\n}"
+						},
+						"url": {
+							"raw": "https://ehr.mock.local/api/patients",
+							"protocol": "https",
+							"host": [
+								"ehr",
+								"mock",
+								"local"
+							],
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointments",
+			"item": [
+				{
+					"name": "Book Appointment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": \"123\",\n  \"provider\": \"Dr. Kumar\",\n  \"date\": \"2025-09-20T10:00:00\",\n  \"reason\": \"Follow-up\"\n}"
+						},
+						"url": {
+							"raw": "https://ehr.mock.local/api/appointments",
+							"protocol": "https",
+							"host": [
+								"ehr",
+								"mock",
+								"local"
+							],
+							"path": [
+								"api",
+								"appointments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinical",
+			"item": [
+				{
+					"name": "Add Clinical Note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"note\": \"Patient reports mild headache. Advised hydration and rest.\"\n}"
+						},
+						"url": {
+							"raw": "https://ehr.mock.local/api/clinical/123/notes",
+							"protocol": "https",
+							"host": [
+								"ehr",
+								"mock",
+								"local"
+							],
+							"path": [
+								"api",
+								"clinical",
+								"123",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Billing",
+			"item": [
+				{
+					"name": "View Billing Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ehr.mock.local/api/billing/123",
+							"protocol": "https",
+							"host": [
+								"ehr",
+								"mock",
+								"local"
+							],
+							"path": [
+								"api",
+								"billing",
+								"123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

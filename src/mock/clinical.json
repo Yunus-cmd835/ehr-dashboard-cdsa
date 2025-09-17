@@ -1,0 +1,13 @@
+[
+  {
+    "id": "c1",
+    "patientId": "p1",
+    "notes": "Patient reports mild chest pain.",
+    "vitals": {
+      "bp": "120/80",
+      "hr": 72
+    },
+    "labs": ["CBC normal", "ECG pending"],
+    "medications": ["Metformin"]
+  }
+]

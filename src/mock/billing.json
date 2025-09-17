@@ -1,0 +1,12 @@
+[
+  {
+    "id": "b1",
+    "patientId": "p1",
+    "insurance": "HealthPlus",
+    "balance": 1200,
+    "payments": [
+      { "date": "2025-08-01", "amount": 300 },
+      { "date": "2025-09-01", "amount": 200 }
+    ]
+  }
+]
